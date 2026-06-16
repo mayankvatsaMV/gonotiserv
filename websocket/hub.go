@@ -23,7 +23,7 @@ func NewHub() *Hub {
 func (h *Hub) Broadcast(msg any) {
 
 	h.Mu.RLock()
-	defer h.Mu.RUnlock()
+	defer h.Mu.RUnlock() //defer
 
 	for conn := range h.Clients {
 
